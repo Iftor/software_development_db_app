@@ -30,7 +30,7 @@ class PersonalityFile(models.Model):
 
 
 class Client(models.Model):
-    orders_number = models.IntegerField(null=False, default=1, verbose_name='Количество заказов')
+    orders_number = models.IntegerField(null=False, default=0, verbose_name='Количество заказов')
     personality_file = models.OneToOneField(PersonalityFile, null=False, on_delete=models.CASCADE, verbose_name='Личное дело')
 
     def __str__(self) -> str:
